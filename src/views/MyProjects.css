@@ -1,16 +1,77 @@
 .my-projects-content {
-    flex-grow: 1;
-    padding: 2rem;
-    overflow-y: auto;
-  }
-  
-  .content-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  
-  .dashboard-section {
-    margin-bottom: 2rem;
-  }
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  color: rgba(0, 0, 0, 0.57);
+}
+
+.my-projects-header-card {
+  width: 100%;
+  padding: 0.5px 0;
+  margin-bottom: 15px;
+}
+
+.my-projects-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+}
+
+.my-projects-subtitle {
+  font-size: 0.95rem;
+  color: rgba(0, 0, 0, 0.57);
+  margin-top: 0.25rem;
+}
+
+.my-projects-tabs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 1rem;
+  background: white;
+  border: 1.5px solid #86909C;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.57);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 0;
+  outline: none;
+}
+
+.tab-button:focus-visible {
+  outline: none;
+}
+
+.tab-left {
+  border-radius: 8px 0 0 8px;
+}
+
+.tab-right {
+  border-radius: 0 8px 8px 0;
+}
+
+.tab-button:not(:last-child) {
+  border-right: none;
+}
+
+.tab-button.active {
+  background-color: #3B8223;
+  color: white;
+}
+
+.dashboard-section {
+  margin-bottom: 2rem;
+  max-height: 24rem;
+  overflow-y: auto;
+}
+
+.cards-wrapper {
+  padding-right: 8px;
+  box-sizing: content-box;
+}

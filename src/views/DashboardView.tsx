@@ -4,14 +4,41 @@ import dashboardIcon from '../assets/dashboard_icon.png';
 import dashboardImage from '../assets/dashboard_image.png';
 import './DashboardView.css';
 
+const cardsData = [
+  {
+    title: 'Project Title 1',
+    info: 'Team Member 1 • Date 1',
+    points: ['Update Point 1', 'Update Point 2', 'Update Point 3'],
+  },
+  {
+    title: 'Project Title 2',
+    info: 'Team Member 2 • Date 2',
+    points: ['Update Point 1', 'Update Point 2', 'Update Point 3'],
+  },
+  {
+    title: 'Project Title 3',
+    info: 'Team Member 3 • Date 3',
+    points: ['Update Point 1', 'Update Point 2', 'Update Point 3'],
+  },
+  {
+    title: 'Project Title 4',
+    info: 'Team Member 4 • Date 4',
+    points: ['Update Point 1', 'Update Point 2', 'Update Point 3'],
+  },
+  {
+    title: 'Project Title 5',
+    info: 'Team Member 5 • Date 5',
+    points: ['Update Point 1', 'Update Point 2', 'Update Point 3'],
+  },
+];
+
 const DashboardView: React.FC = () => {
   return (
     <main className="dashboard-view-content">
-      {/* Wide Container Section */}
       <div className="wide-container">
         <div className="wide-container-left">
-          <h2>Empower Change: Lead or Contribute with Helpful!</h2>
-          <p>
+          <h2 className="section-title">Empower Change: Lead or Contribute with Helpful!</h2>
+          <p className="section-description">
             Welcome to the Helpful project page! Explore opportunities to lead or contribute to projects,
             advance designs for commercialization, or bring external projects for support, resources, and visibility.
           </p>
@@ -22,9 +49,8 @@ const DashboardView: React.FC = () => {
         </div>
       </div>
 
-      {/* Project Updates Section */}
       <div className="content-header">
-        <h2>Project Updates</h2>
+        <h2 className="section-title">All Helpful Updates</h2>
         <div className="sort-by">
           <label htmlFor="sortBy">Sort by:</label>
           <select id="sortBy">
@@ -33,29 +59,21 @@ const DashboardView: React.FC = () => {
           </select>
         </div>
       </div>
+
       <section className="dashboard-section">
-        {/* Use the Card component */}
-        <Card
-          title="Update Title 1"
-          info="Team Member 1 • Date 1"
-          points={['Update Point 1', 'Update Point 2', 'Update Point 3']}
-          icon={dashboardIcon}
-          buttonText="Open"
-        />
-        <Card
-          title="Update Title 2"
-          info="Team Member 2 • Date 2"
-          points={['Update Point 1', 'Update Point 2', 'Update Point 3']}
-          icon={dashboardIcon}
-          buttonText="Open"
-        />
-        <Card
-          title="Update Title 3"
-          info="Team Member 3 • Date 3"
-          points={['Update Point 1', 'Update Point 2', 'Update Point 3']}
-          icon={dashboardIcon}
-          buttonText="Open"
-        />
+        <div className="cards-wrapper">
+          {cardsData.map(({ title, info, points }, idx) => (
+            <Card
+              key={idx}
+              title={title}
+              info={info}
+              points={points}
+              icon={dashboardIcon}
+              buttonText="Apply"
+              bookmark={true}
+            />
+          ))}
+        </div>
       </section>
     </main>
   );

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Card.css';
+import bookmarkIcon from '../assets/bookmark_icon.png';
 
 interface CardProps {
   title: string;
@@ -7,9 +8,16 @@ interface CardProps {
   points: string[];
   icon: string;
   buttonText: string;
+  bookmark?: boolean;  // Optional prop
 }
 
-const Card: React.FC<CardProps> = ({ title, info, points, icon, buttonText }) => {
+const Card: React.FC<CardProps> = ({ title, info, points, icon, buttonText, bookmark = false }) => {
+  const [bookmarked, setBookmarked] = useState(false);
+
+  const toggleBookmark = () => {
+    setBookmarked(!bookmarked);
+  };
+
   return (
     <div className="card">
       <div className="card-header">
@@ -23,7 +31,18 @@ const Card: React.FC<CardProps> = ({ title, info, points, icon, buttonText }) =>
             <li key={index}>{point}</li>
           ))}
         </ul>
-        <button className="join-now-button">{buttonText}</button>
+        <div className="button-bookmark-wrapper">
+          <button className="join-now-button">{buttonText}</button>
+          {bookmark && (
+            <img
+              src={bookmarkIcon}
+              alt="Bookmark"
+              className={`bookmark-icon ${bookmarked ? 'bookmarked' : ''}`}
+              onClick={toggleBookmark}
+              role="button"
+            />
+          )}
+        </div>
       </div>
     </div>
   );
