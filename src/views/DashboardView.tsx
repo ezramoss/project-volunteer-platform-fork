@@ -37,7 +37,9 @@ const DashboardView: React.FC = () => {
     <main className="dashboard-view-content">
       <div className="wide-container">
         <div className="wide-container-left">
-          <h2 className="section-title">Empower Change: Lead or Contribute with Helpful!</h2>
+          <h2 className="section-title">
+            Empower Change: Lead or Contribute with Helpful!
+          </h2>
           <p className="section-description">
             Welcome to the Helpful project page! Explore opportunities to lead or contribute to projects,
             advance designs for commercialization, or bring external projects for support, resources, and visibility.
@@ -50,13 +52,15 @@ const DashboardView: React.FC = () => {
       </div>
 
       <div className="content-header">
-        <h2 className="section-title">All Helpful Updates</h2>
+        <h2>All Helpful Updates</h2>
         <div className="sort-by">
           <label htmlFor="sortBy">Sort by:</label>
-          <select id="sortBy">
-            <option value="recent">Most Recent</option>
-            <option value="oldest">Oldest</option>
-          </select>
+          <div className="select-wrapper">
+            <select id="sortBy">
+              <option value="recent">Most Recent</option>
+              <option value="oldest">Oldest First</option>
+            </select>
+          </div>
         </div>
       </div>
 
