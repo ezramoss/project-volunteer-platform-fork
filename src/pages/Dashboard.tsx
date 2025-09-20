@@ -7,6 +7,7 @@ import DashboardView from '../views/DashboardView';
 import ProfileView from '../views/ProfileView';
 import Tools from '../views/Tools';
 import Settings from '../views/Settings';
+import ProjectView from '../views/ProjectView';
 
 import dashboardIcon from '../assets/dashboard_icon.png';
 import projectsIcon from '../assets/projects_icon.png';
@@ -15,7 +16,7 @@ import toolsIcon from '../assets/tools_icon.png';
 import settingsIcon from '../assets/settings_icon.png';
 import logoutIcon from '../assets/logout_icon.png';
 
-type ViewType = 'DashboardView' | 'MyProjects' | 'Opportunities' | 'ProfileView' | 'Tools' | 'Settings';
+type ViewType = 'DashboardView' | 'MyProjects' | 'Opportunities' | 'ProfileView' | 'Tools' | 'Settings' | 'ProjectView';
 
 const Dashboard: React.FC = () => {
   const [activeView, setActiveView] = useState<ViewType>('DashboardView');
@@ -25,12 +26,12 @@ const Dashboard: React.FC = () => {
     contentRef.current?.scrollTo({ top: 0, behavior: 'auto' });
   }, [activeView]);
 
-  const renderTab = (view: ViewType | 'Logout', label: string, icon: string, onClick?: () => void) => (
+  const renderTab = (view: ViewType | 'Logout', label: string, icon?: string, onClick?: () => void) => (
     <span
       className={`sidebar-tab ${activeView === view ? 'active-tab' : ''}`}
       onClick={onClick ?? (() => setActiveView(view as ViewType))}
     >
-      <img src={icon} alt={`${label} Icon`} className="sidebar-icon" />
+      {icon && <img src={icon} alt={`${label} Icon`} className="sidebar-icon" />}
       {label}
     </span>
   );
@@ -44,6 +45,7 @@ const Dashboard: React.FC = () => {
             {renderTab('DashboardView', 'Dashboard', dashboardIcon)}
             {renderTab('MyProjects', 'My Projects', projectsIcon)}
             {renderTab('Opportunities', 'Opportunities', opportunitiesIcon)}
+            {renderTab('ProjectView', 'Project View')}
           </div>
           <div className="sidebar-bottom">
             {renderTab('Tools', 'Tools', toolsIcon)}
@@ -55,6 +57,7 @@ const Dashboard: React.FC = () => {
           {activeView === 'DashboardView' && <DashboardView />}
           {activeView === 'MyProjects' && <MyProjects />}
           {activeView === 'Opportunities' && <Opportunities />}
+          {activeView === 'ProjectView' && <ProjectView />}
           {activeView === 'ProfileView' && <ProfileView />}
           {activeView === 'Tools' && <Tools />}
           {activeView === 'Settings' && <Settings />}

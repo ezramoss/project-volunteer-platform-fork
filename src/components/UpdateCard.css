@@ -1,0 +1,49 @@
+.update-card {
+  background-color: #e6e6e6;
+  color: #949494;
+  border: 1px solid #606060;
+  border-radius: 8px;
+  padding: 1.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.update-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.update-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: left;
+  flex: 1;
+}
+
+.update-time {
+  background-color: #949494;
+  color: #ffffff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.update-author {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.update-description {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.update-impact {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
