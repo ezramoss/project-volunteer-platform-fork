@@ -1,0 +1,17 @@
+.section-five {
+  margin-top: 32px;
+}
+
+.tools-header {
+  left: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 650;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.tools-card-container {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}

@@ -7,6 +7,7 @@ import './ProjectViewSection4.css';
 import './ProjectViewSection5.css';
 import UpdateCard from '../components/UpdateCard';
 import TeamMember from '../components/TeamMember';
+import ToolsCard from '../components/ToolsCard';
 
 const ProjectView: React.FC = () => {
   return (
@@ -111,8 +112,33 @@ const ProjectView: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 5 - Empty for now */}
-      <section className="project-section section-five"></section>
+      {/* Section 5 - Tools & Resources */}
+      <section className="project-section section-five">
+        <div className="tools-header">Project Tools & Resources</div>
+        <div className="tools-card-container">
+          <ToolsCard
+            icon='../assets/github_icon'
+            name="GitHub"
+            description="Link GitHub to track repositories, issues, and pull requests directly from your project dashboard."
+            owner="John Doe"
+            accessMessage="Connect GitHub"
+          />
+          <ToolsCard
+            icon='../components/slack_icon'
+            name="Slack"
+            description="Integrate Slack to receive project updates, task reminders, and team messages."
+            owner="John Doe"
+            accessMessage="Join Slack"
+          />
+          <ToolsCard
+            icon='../components/figma_icon'
+            name="Figma"
+            description="Integrate Figma to view, comment, or collaborate on design files."
+            owner="John Doe"
+            accessMessage="Access Figma"
+          />
+        </div>
+      </section>
     </main>
   );
 };

@@ -1,0 +1,76 @@
+.tools-card {
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  width: 300px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.tools-card-main {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  padding: 16px;
+  flex-grow: 1;
+}
+
+.tools-card-icon {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.tools-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-grow: 1;
+  color: #000000;
+}
+
+.tools-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.tools-card-description {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.tools-card-owner {
+  font-size: 0.9rem;
+  color: #000000;
+}
+
+.tools-card-footer {
+  background-color: #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #000000;
+  padding: 8px 12px;
+}
+
+.tools-card-button {
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tools-card-button:hover {
+  background-color: #64A640;
+  color: #FFFFFF;
+}
