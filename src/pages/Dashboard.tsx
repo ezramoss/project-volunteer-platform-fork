@@ -53,7 +53,7 @@ const Dashboard: React.FC = () => {
             {renderTab('Logout', 'Logout', logoutIcon, () => console.log('User logged out'))}
           </div>
         </aside>
-        <main className={`content ${activeView === 'DashboardView' ? 'scrollable-content' : ''}`} ref={contentRef}>
+        <main className={`content ${['DashboardView', 'ProjectView'].includes(activeView) ? 'scrollable-content' : ''}`} ref={contentRef}>
           {activeView === 'DashboardView' && <DashboardView />}
           {activeView === 'MyProjects' && <MyProjects />}
           {activeView === 'Opportunities' && <Opportunities />}

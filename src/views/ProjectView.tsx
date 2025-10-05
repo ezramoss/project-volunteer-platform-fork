@@ -1,12 +1,17 @@
 import React from 'react';
 import './ProjectView.css';
+import './ProjectViewSection1.css';
+import './ProjectViewSection2.css';
+import './ProjectViewSection3.css';
+import './ProjectViewSection4.css';
+import './ProjectViewSection5.css';
 import UpdateCard from '../components/UpdateCard';
 import TeamMember from '../components/TeamMember';
 
 const ProjectView: React.FC = () => {
   return (
     <main className="project-view-content">
-      {/* Section 1 - Project Header */}
+      {/* Section 1 - Project */}
       <section className="project-section">
         <div className="project-header">
           <h2>Project - Fabric Mask</h2>
@@ -56,12 +61,12 @@ const ProjectView: React.FC = () => {
         </div>
       </section>
 
-      {/* Section 2 - Updates Header */}
+      {/* Section 2 - Updates */}
       <section className="project-section section-two">
         <div className="updates-header">
           <span className="green-dot" />
           <span className="updates-text">Updates</span>
-          <span className="vertical-line" />
+          <span className="vertical-line-center" />
           <span className="updates-date">As of August, 2025</span>
         </div>
       </section>
@@ -72,14 +77,14 @@ const ProjectView: React.FC = () => {
           title="Community Food Bank Website Redesign"
           author="Sarah Chen"
           description="Led the complete redesign of the food bank's website, improving user experience and donation flow. Increased online donations by 40%."
-          impact="Impact: Increased donation by 40%"
+          impact="Increased donation by 40%"
           timeAgo="5 hours ago"
         />
         <UpdateCard
-          title="Local Logistics Network Integration"
-          author="Marcus Allen"
-          description="Integrated logistics data into the platform, enhancing real-time tracking for local deliveries and inventory status."
-          impact="Impact: Reduced delivery delays by 25%"
+          title="Mobile App for Volunteer Coordination"
+          author=""
+          description="Developed a mobile app to streamline volunteer scheduling and communication. Now used by 15 local nonprofits."
+          impact="Increased donation by 40%"
           timeAgo="2 days ago"
         />
       </section>

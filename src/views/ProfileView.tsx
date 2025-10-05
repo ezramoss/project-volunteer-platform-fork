@@ -96,7 +96,6 @@ const ProfileView: React.FC = () => (
           </div>
         ))}
       </div>
-      <div style={{ height: '3rem' }} />
     </div>
   </div>
 );
