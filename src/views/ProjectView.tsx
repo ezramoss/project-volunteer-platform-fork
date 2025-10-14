@@ -87,6 +87,7 @@ const ProjectView: React.FC = () => {
           description="Developed a mobile app to streamline volunteer scheduling and communication. Now used by 15 local nonprofits."
           impact="Increased donation by 40%"
           timeAgo="2 days ago"
+          isLast={true}
         />
       </section>
 

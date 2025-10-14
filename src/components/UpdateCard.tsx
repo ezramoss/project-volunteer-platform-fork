@@ -8,14 +8,22 @@ interface UpdateCardProps {
   description: string;
   impact: string;
   timeAgo: string;
+  isLast?: boolean;
 }
 
-const UpdateCard: React.FC<UpdateCardProps> = ({ title, author, description, impact, timeAgo }) => {
+const UpdateCard: React.FC<UpdateCardProps> = ({
+  title,
+  author,
+  description,
+  impact,
+  timeAgo,
+  isLast = false,
+}) => {
   return (
     <div className="update-card-container">
       <div className="update-card-icon-section">
         <img src={teamMemberIcon} alt="Team Member Icon" className="team-member-icon" />
-        <div className="vertical-line" />
+        <div className={`vertical-line ${isLast ? 'vertical-line-end' : ''}`} />
       </div>
 
       <div className="update-card">
