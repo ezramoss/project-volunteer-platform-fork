@@ -1,3 +1,5 @@
+//User Profile Section
+
 import React from 'react';
 import './ProfileView.css';
 import profilePic from '../assets/large_profile_icon.png';

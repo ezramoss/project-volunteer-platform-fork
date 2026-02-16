@@ -1,8 +1,10 @@
+//Single Page Entry Point
+
 import React, { useState, useEffect, useRef } from 'react';
 import './Dashboard.css';
 import Header from '../components/Header.tsx';
-import MyProjects from '../views/MyProjects';
-import Opportunities from '../views/Opportunities';
+import MyProjects from '../views/MyProjectsView.tsx';
+import Opportunities from '../views/OpportunitiesView.tsx';
 import DashboardView from '../views/DashboardView';
 import ProfileView from '../views/ProfileView';
 import Tools from '../views/Tools';
@@ -15,6 +17,8 @@ import opportunitiesIcon from '../assets/opportunities_icon.png';
 import toolsIcon from '../assets/tools_icon.png';
 import settingsIcon from '../assets/settings_icon.png';
 import logoutIcon from '../assets/logout_icon.png';
+
+//Sets Active Tab
 
 type ViewType = 'DashboardView' | 'MyProjects' | 'Opportunities' | 'ProfileView' | 'Tools' | 'Settings' | 'ProjectView';
 

@@ -1,3 +1,5 @@
+//Opportunities Tab
+
 import React, { useState } from 'react';
 import Card from '../components/Card';
 import opportunitiesIcon from '../assets/opportunities_icon.png';

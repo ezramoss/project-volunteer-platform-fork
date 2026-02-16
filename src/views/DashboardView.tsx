@@ -1,3 +1,5 @@
+//Dashboard Tab
+
 import React from 'react';
 import Card from '../components/Card';
 import dashboardIcon from '../assets/dashboard_icon.png';
